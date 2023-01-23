@@ -2,11 +2,9 @@
 
 top_dir=$1
 node_name=$2
-start_time=$3
 
 echo "top_dir: $top_dir"
 echo "node_name: $node_name"
-echo "start_time: $start_time"
 
 cd "$top_dir/$node_name"
 
@@ -30,17 +28,6 @@ then
         $top_dir/persist/$node_name/var/run/emane.uuid
 fi
 
-# EMANE Spectrum Monitor Utility
-if [ -f emane-spectrum-monitor.xml ]
-then
-    start_emane_spectrum_monitor \
-        $node_name \
-        emane-spectrum-monitor.xml \
-        $top_dir/persist/$node_name/var/log/emane-spectrum-monitor.log \
-        $top_dir/persist/$node_name/var/run/emane-spectrum-monitor.pid \
-        $top_dir/persist/$node_name/var/run/emane-spectrum-monitor.uuid
-fi
-
 # EMANE Transport Daemon
 if [ -f transportdaemon.xml ]
 then
@@ -62,18 +49,12 @@ fi
 # Event Daemon
 if [ -f eventdaemon.xml ]
 then
-    start_emaneeventd_and_wait_for_gpspty \
+    start_emaneeventd \
         $node_name \
         eventdaemon.xml \
         $top_dir/persist/$node_name/var/log/emaneeventd.log \
         $top_dir/persist/$node_name/var/run/emaneeventd.pid \
-        $top_dir/persist/$node_name/var/run/emaneeventd.uuid \
-        $top_dir/persist/$node_name/var/run/gps.pty
-
-    start_gpsd \
-        $node_name \
-        $top_dir/persist/$node_name/var/run/gps.pty \
-        $top_dir/persist/$node_name/var/run/gpsd.pid
+        $top_dir/persist/$node_name/var/run/emaneeventd.uuid
 fi
 
 # OLSRD or BATMAN
@@ -116,29 +97,6 @@ then
         $top_dir/persist/$node_name/var/log/otestpointd.log \
         $top_dir/persist/$node_name/var/run/otestpointd.pid \
         $top_dir/persist/$node_name/var/run/otestpointd.uuid
-fi
-
-# Multi-Generator (MGEN) Network Test Tool
-if [ -f mgen ]
-then
-    start_mgen \
-        $node_name \
-        mgen \
-        $top_dir/persist/$node_name/var/log/mgen.out \
-        $top_dir/persist/$node_name/var/run/mgen.pid \
-        $top_dir/persist/$node_name/var/log/mgen.log \
-        "$start_time"
-fi
-
-# iPerf
-if [ -f iperf ]
-then
-    start_iperf \
-        $node_name \
-        iperf \
-        $top_dir/persist/$node_name/var/log/iperf.log \
-        $top_dir/persist/$node_name/var/run/iperf.pid \
-        "$start_time"
 fi
 
 # Run node-poststart script
