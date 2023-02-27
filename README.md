@@ -15,6 +15,6 @@ A startup script titled `run-emane.sh` is provided to streamline the process. Th
 
 This testbed used for integration testing between EMANE, ARGoS, and SysML. It consists of a basic testbed with three mobile nodes and a static gateway node. This experiment uses a basic "basewave" wireless model for testing. The basewave uses an rfPipe waveform with the default configuration listed on the EMANE wiki.
 
-*exp-02*: Experiment Number: 1
+*exp-02*: Experiment Number: 2
 
 This testbed an extension of *exp-01* used for further integration testing. The configuration is identical with the except of 10 mobile nodes rather than 3. *exp-02* still uses the generic "basewave" wireless model.
