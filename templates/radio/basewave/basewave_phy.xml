@@ -19,7 +19,7 @@
     <param name="noisemaxsegmentduration"           value="1000000"/>
     <param name="noisemaxsegmentoffset"             value="300000"/>
     <param name="noisemode"                         value="none"/>
-    <param name="propagationmodel"                  value="precomputed"/>
+    <param name="propagationmodel"                  value="freespace"/>
     <param name="subid"                             value="1"/>
     <param name="systemnoisefigure"                 value="4.000000"/>
     <param name="timesyncthreshold"                 value="10000"/>

@@ -1,2 +1,11 @@
-0.0 nem:1 pathloss nem:2,50
-0.0 nem:2 pathloss nem:1,50
+0.0 nem:1 pathloss nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:2 pathloss nem:1,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:3 pathloss nem:1,0 nem:2,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:4 pathloss nem:1,0 nem:2,0 nem:3,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:5 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:6 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:7 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:8,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:8 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:9,0 nem:10,0 nem:254,0
+0.0 nem:9 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:10,0 nem:254,0
+0.0 nem:10 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:254,0
+0.0 nem:254 pathloss nem:1,0 nem:2,0 nem:3,0 nem:4,0 nem:5,0 nem:6,0 nem:7,0 nem:8,0 nem:9,0 nem:10,0
