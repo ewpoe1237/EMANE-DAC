@@ -99,6 +99,15 @@ then
         $top_dir/persist/$node_name/var/run/otestpointd.uuid
 fi
 
+# EMANE Relay for ARGoS Daemon
+if [ -f emanerelayd ]
+then
+    start_emanerelayd \
+        ${nem_id} \
+        $top_dir/persist/$node_name/var/log/emanerelayd.log \
+        $top_dir/persist/$node_name/var/run/emanerelayd.pid
+fi
+
 # Run node-poststart script
 if [ -f ./node-poststart ]
 then

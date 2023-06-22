@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CURR_EXP_RANGE=1-2
+CURR_EXP_RANGE=0-2
 
 usage()
 {
