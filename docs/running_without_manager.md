@@ -1,4 +1,4 @@
-# Running Experiment-00 Without EMANE Manager
+# Running Experiment-00 Without EMANE-Manager
 Since the first experiment (exp-00) in this repository does not rely on robot locations to calculate pathloss, it can be run without the intermediate EMANE-Manager script. This page describes the process to start up the shared platform in this manner.
 
 ## Setting up the EMANE Experiment
@@ -25,10 +25,10 @@ The EMANE experiment can be run by envoking:
 sudo ./run-emane.sh start 0
 ```
 Each network node will start an LXC container that can be accessed via `ssh`.
-To access `nem-1` the command is simply `ssh nem-1`. NEMs with IDs between 1 and 15 have their access IP addresses stored in `/etc/hosts`.
+To access `nem-1` the command is simply `ssh nem-1`. NEMs with IDs between 1 and 15 have their access IP addresses stored in `/etc/hosts`. Each LXC inherets the host file system and authentication credentials so the LXC can be logged into with the same user account as the host
 
 ## Running emanerelayd (ARGoS Interface Program)
-The EMANE relay program (emanerelayd) is by default configured to not run automatically on each NEM to allow for manual debugging. To start the program, it must be run on each NEM. The command must be ran from inside each LXC and must be provided the ID number of the NEM currently logged into. The program can be ran with the `-d, --daemonize` argument to run it disconnected from the currently terminal.
+The EMANE relay program, `emanerelayd`, is by default configured to not run automatically on each NEM to allow for manual debugging. To start the program, it must be run on each NEM. The command must be run from inside each LXC and must be provided the ID number of the NEM currently logged into. The program can be run with the `-d, --daemonize` argument to run it disconnected from the currently terminal.
 
 Once the program is running, it will wait until ARGoS connects to it, then resume running. This connection occurs after ARGoS is signaled in the next step.
 
