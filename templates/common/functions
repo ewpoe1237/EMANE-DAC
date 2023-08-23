@@ -216,16 +216,17 @@ start_olsr()
     olsrd -f "$routingconf" &> "$logfile"
 }
 
-start_emanerelaytd()
+start_emanerelayd()
 {
     local nem_id=$1
-    local logfile=$3
-    local pidfile=$4
+    # local logfile=$3
+    # local pidfile=$4
 
     echo "nem-$nem_id: starting emanerelayd"
 
-    emanetransportd "$nem_id" -d -l 3 -f "$logfile" \
-                    --pidfile "$pidfile"
+    # emanetransportd "$nem_id" -d -l 3 -f "$logfile" \
+    #                 --pidfile "$pidfile"
+    emanerelayd "$nem_id" -d
 
     retval=$?
 

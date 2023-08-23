@@ -16,8 +16,8 @@ usage()
     echo
     echo " start options:"
     echo "  -s FILE       File to run systems experiment control"
-    echo "  -f FILE       EMANE-ARGoS Manager log file"
-    echo "  -l LEVEL      EMANE-ARGoS Manager log level [0-5]"
+    echo "  -f FILE       EMANE-Manager log file"
+    echo "  -l LEVEL      EMANE-Manager log level [0-5]"
     echo
     echo " stop options:"
     # echo "  -n NUMBER     Sample stop option"

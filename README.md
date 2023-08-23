@@ -13,7 +13,7 @@ A startup script titled `run-emane.sh` is provided to streamline the process. Th
 ## Experiment Key
 *exp-00*: Experiment Number: 0
 
-This testbed is the same as Experiment 0, but is configured to use precomputed values (found in scenario.eel) for path loss instead of computing it using the `freespace` model.
+This testbed is the same as Experiment 1, but is configured to use precomputed values (found in scenario.eel) for path loss instead of computing it using the `freespace` model.
 
 *exp-01*: Experiment Number: 1
 
