@@ -1,0 +1,21 @@
+<%!
+    from ipaddress import ip_address
+
+    def get_address(addr):
+        return str(ip_address(addr))
+%>
+
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<%
+daemon_addrs = set()
+for node,items in __share.items():
+    for item in items:
+        if item == 'control_ip_addr': 
+            daemon_addrs.add(items[item])
+%>
+<otestpoint-broker discovery="0.0.0.0:9001" publish="0.0.0.0:9002">
+% for addr in sorted(daemon_addrs):
+<testpoint discovery="${get_address(addr)}:8881"
+           publish="${get_address(addr)}:8882"/>
+% endfor
+</otestpoint-broker>

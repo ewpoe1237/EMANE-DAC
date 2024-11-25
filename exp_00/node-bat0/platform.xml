@@ -1,0 +1,24 @@
+<%!
+    from ipaddress import ip_network
+    def get_netmask(cidr):
+        return ip_network(cidr).netmask
+%>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE platform SYSTEM 'file:///usr/share/emane/dtd/platform.dtd'>
+<platform>
+  <param name="otamanagerchannelenable" value="on"/>
+  <param name="otamanagerdevice" value="${control_interface}"/>
+  <param name="otamanagergroup" value="224.1.2.8:45702"/>
+  <param name="eventservicegroup" value="224.1.2.8:45703"/>
+  <param name="eventservicedevice" value="${control_interface}"/>
+  <param name="controlportendpoint" value="0.0.0.0:47000"/>
+  
+  <nem id="${etce_index}" definition="precomputed_nem.xml">
+    <transport definition="transvirtual.xml">
+      <param name="device" value="${waveform_interface}"/>
+      <param name="address" value="10.100.0.${etce_index}/24"/>
+      <param name="mask" value="${get_netmask('10.100.0.{}.24'.format(nem_id))}"/>
+    </transport>
+  </nem>
+</platform>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE phy SYSTEM 'file:///usr/share/emane/dtd/phy.dtd'>
+<phy>
+    <param name="bandwidth"                         value="1000000"/>
+    <param name="excludesamesubidfromfilterenable"  value="on"/>
+    <param name="fading.model"                      value="none"/>
+    <param name="fading.nakagami.distance0"         value="100.000000"/>
+    <param name="fading.nakagami.distance1"         value="250.000000"/>
+    <param name="fading.nakagami.m0"                value="0.750000"/>
+    <param name="fading.nakagami.m1"                value="1.000000"/>
+    <param name="fading.nakagami.m2"                value="200.000000"/>
+    <param name="fixedantennagain"                  value="38.000000"/>
+    <param name="fixedantennagainenable"            value="on"/>
+    <param name="frequency"                         value="2347000000"/>
+    <param name="frequencyofinterest"               value="2347000000"/>
+    <param name="noisebinsize"                      value="20"/>
+    <param name="noisemaxclampenable"               value="off"/>
+    <param name="noisemaxmessagepropagation"	    value="200000"/>
+    <param name="noisemaxsegmentduration"           value="1000000"/>
+    <param name="noisemaxsegmentoffset"             value="300000"/>
+    <param name="noisemode"                         value="none"/>
+    <param name="propagationmodel"                  value="precomputed"/>
+    <param name="subid"                             value="1"/>
+    <param name="systemnoisefigure"                 value="4.000000"/>
+    <param name="timesyncthreshold"                 value="10000"/>
+    <param name="txpower"                           value="0.000000"/>
+</phy>

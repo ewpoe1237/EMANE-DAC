@@ -1,0 +1,20 @@
+<test>
+  <name>exp_00</name>
+
+  <description>
+    This testbed used for integration testing between EMANE, ARGoS, and SysML. It consists of a basic testbed with three mobile nodes and a static gateway node. This experiment uses a basic "basewave" wireless model for testing. The basewave uses an rfPipe waveform with the default configuration listed on the EMANE wiki. In this configuration, the testbed is the same as in Experiment 1 but is configured to use precomputed values for path loss instead of computing it using the freespace model.
+  </description>
+
+  <overlays>
+    <overlay name="control_interface" value="backchan0"/>
+    <overlay name="experiment_control_interface" value="control0"/>
+    <overlay name="waveform_interface" value="emane0"/>
+  </overlays>
+
+  <templates indices="1-3, 254">
+    <directory name="node">
+      <overlay name="rtsthreshold" value="0"/>
+      <overlaylist name="mgen_flow" values="1,2,3"/>
+    </directory>
+  </templates>
+</test>
