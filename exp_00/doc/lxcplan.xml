@@ -16,7 +16,7 @@
           <parameter name="lxc.network.name" value="backchan0"/>
           <parameter name="lxc.network.flags" value="up"/>
           <parameter name="lxc.network.hwaddr" value="02:00:${'%02x' % lxc_index}:01:00:${'%02x' % lxc_index}"/>
-          <parameter name="lxc.network.ipv4" value="10.99.0.${lxc_index}/24"/>
+          <parameter name="lxc.network.ipv4" value="10.99.0.${lxc_index}/16"/>
           <parameter name="lxc.network.veth.pair" value="veth.ctl.${lxc_index}"/>
         </interface>
 
@@ -25,7 +25,7 @@
           <parameter name="lxc.network.name" value="ota0"/>
           <parameter name="lxc.network.flags" value="up"/>
           <parameter name="lxc.network.hwaddr" value="02:00:${'%02x' % lxc_index}:02:00:${'%02x' % lxc_index}"/>
-          <parameter name="lxc.network.ipv4" value="10.99.0.${lxc_index}/16"/>
+          <parameter name="lxc.network.ipv4" value="10.98.0.${lxc_index}/16"/>
           <parameter name="lxc.network.veth.pair" value="veth.ota.${lxc_index}"/>
         </interface>
 
@@ -95,13 +95,13 @@
       <bridges>
         <bridge name="br.ctl">
           <ipaddress>
-            <ipv4>10.99.0.100/24</ipv4>
+            <ipv4>10.99.0.100/16</ipv4>
           </ipaddress>
         </bridge>
 
         <bridge name="br.ota">
           <ipaddress>
-            <ipv4>10.99.0.100/16</ipv4>
+            <ipv4>10.98.0.100/16</ipv4>
           </ipaddress>
         </bridge>
 
@@ -109,6 +109,7 @@
 
       <containers>
         <container lxc_name="helper" lxc_indices="201" template="node"/>
+        <container lxc_name="node-bat0" lxc_indices="200" template="node"/>
         <container lxc_name="node-${'%03d' % lxc_index}" lxc_indices="1-3,254" template="node"/>
       </containers>
     </host>
