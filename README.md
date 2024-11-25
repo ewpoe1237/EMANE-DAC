@@ -10,6 +10,7 @@ The testbeds included in this repo use the [Python-ETCE](https://github.com/adja
     - Archived testbeds use [letce2](https://github.com/adjacentlink/letce2-tutorial) - the transition to Python-ETCE allows compatibility with more modern (v22.04 and later) Ubuntu systems.
 
 A startup script titled `run-emane.sh` is provided to streamline the process. This script must be provided an action to perform (build, start, stop, or clean) and an experiment number. For details on other optional arguments, `run-emane.sh help` can be used.
+![Diagram detailing testbed setup for exp-00 and exp-01](./media/exp_00_01%20testbed.png)
 
 ## Experiment Key
 *exp-00*: Experiment Number: 0

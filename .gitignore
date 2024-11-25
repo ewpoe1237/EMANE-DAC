@@ -2,7 +2,9 @@
 exp-*/*
 
 # Except do not ignore persistent files (config + build files)
-!exp-*/experiment.cfg
-!exp-*/letce2.cfg
-!exp-*/Makefile
-!exp-*/batman-routes
+!exp-*/doc
+!exp-*/helper
+!exp-*/node-bat0
+!exp-*/node.tpl
+!exp-*/steps.xml
+!exp-*/test.xml
